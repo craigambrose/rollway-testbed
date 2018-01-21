@@ -17,6 +17,10 @@
     "package": "webpack --config webpack.build.config.js",
     "postpackage": "electron-packager ./ --out=./builds"
   },
+  "dependencies": {
+    "moment": "^2.20.1",
+    "storyblocks": "^0.1.0"
+  },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.1.2",
