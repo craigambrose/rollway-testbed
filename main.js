@@ -1,5 +1,7 @@
 'use strict'
 
+import startServer from './src/sbot/server'
+
 // Import parts of electron to use
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
@@ -14,6 +16,8 @@ let dev = false
 if (process.defaultApp || /[\\/]electron-prebuilt[\\/]/.test(process.execPath) || /[\\/]electron[\\/]/.test(process.execPath)) {
   dev = true
 }
+
+startServer()
 
 function createWindow () {
   // Create the browser window.

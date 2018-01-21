@@ -59,7 +59,7 @@ module.exports = {
     setup () {
       spawn(
         'electron',
-        ['.'],
+        ['-r babel-register .'],
         { shell: true, env: process.env, stdio: 'inherit' }
       )
       .on('close', code => process.exit(0))
